@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1e2e" />
+    <title>Iron Tracks Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main>
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Iron Tracks Archive home"><span class="brand-mark">IT</span><span>Iron Tracks<br><em>Archive</em></span></a>
+        <div class="corpus-status"><span class="status-dot"></span> Corpus indexed <span>•</span> 50 pages</div>
+        <a class="pdf-link" href="https://drive.google.com/file/d/1EoxtVqm1niBnn7UiEUcYcpOVmG2-Zkx2/view?usp=drive_link" target="_blank" rel="noreferrer">Open source PDF <span>↗</span></a>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="eyebrow">Research assistant · 19th-century India</div>
+        <h1>Ask the archive.<br><i>Trace the evidence.</i></h1>
+        <p class="hero-copy">A citation-first research assistant for <em>Iron Tracks &amp; Copper Wires</em> - a 50-page monograph on railways, telegraphs, contracts, and colonial infrastructure.</p>
+        <div class="topics" aria-label="Collection topics"><span>Railway development</span><span>Engineering works</span><span>Colonial contracts</span><span>Telegraphy</span><span>Archival records</span></div>
+      </section>
+
+      <section class="workspace" aria-label="Research workspace">
+        <div class="query-panel">
+          <div class="section-label"><span>01</span> Research query</div>
+          <div class="ask-box">
+            <textarea id="question" rows="3" aria-label="Your research question" placeholder="Ask a question about the monograph…">What exact annual guaranteed interest rate did the colonial administration promise private British railway companies?</textarea>
+            <div class="ask-actions"><span class="scope-note">Searches only the indexed monograph</span><button id="askButton" type="button">Search archive <span>→</span></button></div>
+          </div>
+          <div class="suggestions" aria-label="Suggested questions">
+            <button data-question="What engineering obstacle made the Bhor Ghat reversing station necessary, and what was the gradient ratio?">Bhor Ghat engineering</button>
+            <button data-question="Who supervised the experimental Diamond Harbour underwater telegraph cable in 1851?">Diamond Harbour cable</button>
+            <button data-question="What is the ticket price for an Executive Chair Car on Vande Bharat Express?">Test corpus boundary</button>
+          </div>
+        </div>
+
+        <div class="answer-panel" aria-live="polite">
+          <div class="answer-heading"><div class="section-label"><span>02</span> Archival response</div><div id="confidence" class="confidence high">HIGH EVIDENCE</div></div>
+          <div id="answer" class="answer-body"></div>
+          <div class="evidence-title">Retrieved evidence <span id="evidenceCount">1 matching passage</span></div>
+          <div id="evidence" class="evidence-list"></div>
+        </div>
+      </section>
+
+      <section class="method" aria-label="Methodology">
+        <div>
+          <div class="eyebrow">Built for accountable research</div>
+          <h2>Every answer has a <i>paper trail.</i></h2>
+        </div>
+        <div class="method-cards">
+          <article><b>01</b><h3>Retrieve</h3><p>Ranks passage-level records from the supplied corpus using meaningful terms, dates, entities, and phrases.</p></article>
+          <article><b>02</b><h3>Ground</h3><p>Answers only where an archival passage supports the claim. Otherwise, it clearly abstains.</p></article>
+          <article><b>03</b><h3>Cite</h3><p>Surfaces the exact page and chapter so a researcher can inspect the primary text.</p></article>
+        </div>
+      </section>
+
+      <section class="evaluation" aria-label="Assessment set">
+        <div class="section-label"><span>03</span> Assessment-ready evaluation</div>
+        <div class="eval-grid" id="evalGrid"></div>
+      </section>
+      <footer><span>IRON TRACKS ARCHIVE · RESEARCH PROTOTYPE</span><span>Source-bounded RAG · v1.0</span></footer>
+    </main>
+    <script src="./corpus.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
